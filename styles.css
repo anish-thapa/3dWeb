@@ -1,4 +1,5 @@
 /* General styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +12,25 @@ body {
     background: #111;
     overflow-x: hidden;
 }
+/* trying */
+#hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.textcontents {
+    position: relative;
+    z-index: 1; /* Ensure text is above the canvas */
+    color: white; /* Change text color to improve visibility */
+    text-align: center;
+}
 
 /* Hero Section */
 #hero {
     position: relative;
     height: 100vh;
     display: flex;
+    flex-direction: column; /* Stack children vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -41,67 +55,34 @@ canvas {
     width: 100%;
     z-index: -1;
 }
-
-/* Projects Section */
-#projects {
-    padding: 60px 20px;
-    background: #222;
+.Anish {
+    transition: 0.5s color, 0.5s transform; /* Adjust duration as needed */
 }
 
-#projects h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: #fff;
-}
+.Anish:hover {
+    cursor: pointer;
+    color: rgb(255, 15, 15);
+    transform: scale(1.1); }
 
-.project-gallery {
+
+.social-icons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    margin: 10px;
 }
 
-.project-card {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-    text-align: center;
-    background: #111;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.contact-btn {
-    padding: 10px 20px;
-    background: #ff5252;
-    color: white;
+.social-icons a {
     text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    color: inherit;
+    transition: 0.5s color, 0.5s transform;
 }
 
-.contact-btn:hover {
-    background: #ff2d2d;
+.social-icons a:hover {
+    color: rgb(255, 15, 15);
+    transform: scale(1.1);
 }
+
+
+
+
